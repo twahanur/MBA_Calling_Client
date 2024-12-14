@@ -3,7 +3,9 @@ import route from './route';
 import io from 'socket.io-client';
 import { Toaster } from 'react-hot-toast';
 
-export const BACKEND_URL = import.meta.env.MODE === 'development' ? 'http://localhost:4001' :  import.meta.env.VITE_BACKEND;
+// export const BACKEND_URL = import.meta.env.MODE === 'development' ? 'http://localhost:4001' :  import.meta.env.VITE_BACKEND;
+export const BACKEND_URL =  'http://localhost:4001';
+
 export const socket = io.connect(BACKEND_URL);
 console.log({socket: socket})
 
